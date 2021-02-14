@@ -1,0 +1,12 @@
+.flex-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin flex-grid($columns: 4) {
+  @for $i from 1 to $columns {
+    .flex-#{$columns}col-#{$i} {
+      flex: 0 0 calc(calc(#{$i} / #{$columns}) * 100);
+    }
+  }
+}

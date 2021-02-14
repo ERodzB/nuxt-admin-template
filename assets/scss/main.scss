@@ -1,3 +1,7 @@
 @import 'Theme/themes';
 @import 'Typography/fontFamily';
 @import 'Typography/typeScale';
+@import 'Utilities/Mixins/flexGrid';
+@import 'Utilities/Mixins/width';
+
+@include flex-grid;
