@@ -2,6 +2,9 @@
 @import 'Typography/fontFamily';
 @import 'Typography/typeScale';
 @import 'Utilities/Mixins/flexGrid';
-@import 'Utilities/Mixins/width';
+@import 'Utilities/Mixins/grid';
+@import 'Utilities/width';
+@import 'Utilities/displayFlex';
 
 @include flex-grid;
+@include grid(4);

@@ -1,0 +1,19 @@
+$gridGaps: 4 8 14 18 26 34;
+@each $gap in $gridGaps {
+  .g-g-#{$gap} {
+    grid-gap: #{$gap}px;
+  }
+}
+@mixin grid($columns: 4) {
+  .d-grid-#{$columns} {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+  }
+  @for $i from 1 to $columns + 1 {
+    @for $j from $i to $columns + 1 {
+      .g-#{$columns}col-#{$i}-#{$j} {
+        grid-column: #{$i}/#{$j};
+      }
+    }
+  }
+}
