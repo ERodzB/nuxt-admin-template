@@ -1,0 +1,18 @@
+$bodyFontFamily: 'Poppins', sans-serif;
+$titlesFontFamily: 'Roboto Slab', serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+legend {
+  font-family: $titlesFontFamily;
+}
+input,
+p,
+span,
+textarea,
+label {
+  font-family: $bodyFontFamily;
+}
