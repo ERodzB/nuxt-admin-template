@@ -1,0 +1,75 @@
+@import '../Utilities/Mixins/buttonMaker';
+[class*='btn'] {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 6px;
+}
+
+$primaryButtonColors: (
+  regular:
+    map-get(
+      $map: $main-theme,
+      $key: 'primary-color',
+    ),
+  regularTextColor:
+    map-get(
+      $map: $main-theme,
+      $key: 'inverted-text-color',
+    ),
+  hover:
+    map-get(
+      $map: $main-theme,
+      $key: 'primary-hover-color',
+    ),
+  active:
+    map-get(
+      $map: $main-theme,
+      $key: 'primary-active-color',
+    ),
+  focus:
+    map-get(
+      $map: $main-theme,
+      $key: 'primary-focus-color',
+    ),
+  disabled:
+    map-get(
+      $map: $main-theme,
+      $key: 'disabled-color',
+    ),
+);
+@include buttonMaker($colors: $primaryButtonColors, $name: 'primary');
+$secondaryButtonColors: (
+  regular:
+    map-get(
+      $map: $main-theme,
+      $key: 'secondary-color',
+    ),
+  regularTextColor:
+    map-get(
+      $map: $main-theme,
+      $key: 'secondary-button-text-color',
+    ),
+  hover:
+    map-get(
+      $map: $main-theme,
+      $key: 'secondary-hover-color',
+    ),
+  active:
+    map-get(
+      $map: $main-theme,
+      $key: 'secondary-active-color',
+    ),
+  focus:
+    map-get(
+      $map: $main-theme,
+      $key: 'secondary-focus-color',
+    ),
+  disabled:
+    map-get(
+      $map: $main-theme,
+      $key: 'disabled-color',
+    ),
+);
+@include buttonMaker($colors: $secondaryButtonColors, $name: 'secondary');

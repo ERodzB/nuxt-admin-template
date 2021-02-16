@@ -1,0 +1,23 @@
+@mixin buttonMaker($colors, $name: 'primary') {
+  .btn-#{$name} {
+    color: map-get($map: $colors, $key: 'regularTextColor');
+    background-color: map-get($map: $colors, $key: 'regular');
+    &:hover {
+      cursor: pointer;
+      background-color: map-get($map: $colors, $key: 'hover');
+    }
+    &:disabled {
+      cursor: default;
+      background-color: map-get($map: $colors, $key: 'disabled');
+    }
+    &:active {
+      cursor: pointer;
+      background-color: map-get($map: $colors, $key: 'active');
+    }
+    &:focus {
+      cursor: pointer;
+      background-color: map-get($map: $colors, $key: 'focus');
+    }
+    transition: background-color 0.2s ease-in;
+  }
+}

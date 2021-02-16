@@ -1,3 +1,5 @@
+@import '../../Utilities/Mixins/colorMaker';
+
 $aqua-100: hsl(180, 97%, 25%) !default;
 $aqua-200: hsl(180, 98%, 35%) !default;
 $aqua-300: hsl(180, 95%, 43%) !default;
@@ -7,3 +9,16 @@ $aqua-600: hsl(180, 91%, 70%) !default;
 $aqua-700: hsl(180, 91%, 82%) !default;
 $aqua-800: hsl(180, 96%, 91%) !default;
 $aqua-900: hsl(180, 89%, 96%) !default;
+
+$aquaColors: (
+  100: $aqua-100,
+  200: $aqua-200,
+  300: $aqua-300,
+  400: $aqua-400,
+  500: $aqua-500,
+  600: $aqua-600,
+  700: $aqua-700,
+  800: $aqua-800,
+  900: $aqua-900,
+);
+@include colorMaker($aquaColors, 'aqua');

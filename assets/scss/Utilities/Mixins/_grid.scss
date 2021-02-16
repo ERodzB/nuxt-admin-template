@@ -4,14 +4,19 @@ $gridGaps: 4 8 14 18 26 34;
     grid-gap: #{$gap}px;
   }
 }
-@mixin grid($columns: 4) {
-  .d-grid-#{$columns} {
+@mixin grid($columns: 4, $preffix: '') {
+  .d#{$preffix}-grid-#{$columns} {
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
   }
   @for $i from 1 to $columns + 1 {
+    .g#{$preffix}-#{$columns}col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+  @for $i from 1 to $columns + 1 {
     @for $j from $i to $columns + 1 {
-      .g-#{$columns}col-#{$i}-#{$j} {
+      .g#{$preffix}-#{$columns}col-#{$i}-#{$j} {
         grid-column: #{$i}/#{$j};
       }
     }

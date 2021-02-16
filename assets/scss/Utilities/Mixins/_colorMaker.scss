@@ -1,0 +1,10 @@
+@mixin colorMaker($colors, $colorName) {
+  @each $colorRange, $colorValue in $colors {
+    .color-#{$colorName}-#{$colorRange} {
+      color: $colorValue;
+    }
+    .bg-#{$colorName}-#{$colorRange} {
+      background-color: $colorValue;
+    }
+  }
+}

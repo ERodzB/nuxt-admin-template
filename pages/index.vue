@@ -22,15 +22,32 @@
         </a>
       </div>
     </div>
+    <div class="flex-wrapper">
+      <button class="flex-18col-2 btn-secondary">Submit</button>
+      <form-text-input
+        input-label="Email"
+        input-requirements="Must be a correct email"
+        input-name="email"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+import FormTextInput from '@/components/FormTextInput.vue'
+
+export default {
+  components: {
+    FormTextInput,
+  },
+}
 </script>
 
 <style lang="scss">
 h1 {
   color: map-get($main-theme, 'primary-color');
+}
+.red {
+  color: red;
 }
 </style>

@@ -1,10 +1,23 @@
+// Color Theme
 @import 'Theme/themes';
+//Typography
 @import 'Typography/fontFamily';
 @import 'Typography/typeScale';
+//Utilities
 @import 'Utilities/Mixins/flexGrid';
 @import 'Utilities/Mixins/grid';
 @import 'Utilities/width';
 @import 'Utilities/displayFlex';
-
-@include flex-grid;
-@include grid(4);
+//Components
+@import 'Components/button';
+@import 'Components/textInput';
+//Main HTML Rules
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+@include grid;
+@include flex-grid(18);

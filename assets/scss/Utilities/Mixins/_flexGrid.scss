@@ -4,9 +4,9 @@
 }
 
 @mixin flex-grid($columns: 4) {
-  @for $i from 1 to $columns {
+  @for $i from 1 to $columns + 1 {
     .flex-#{$columns}col-#{$i} {
-      flex: 0 0 calc(calc(#{$i} / #{$columns}) * 100);
+      flex: 0 0 $i/$columns * 100%;
     }
   }
 }
