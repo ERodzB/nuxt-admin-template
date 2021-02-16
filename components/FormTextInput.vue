@@ -1,19 +1,18 @@
 <template>
   <div class="text-input-container">
+    <div class="text-input-container__text-icon">
+      <awesome-icon name="at"></awesome-icon>
+    </div>
     <input
       :id="inputId"
-      type="text"
+      :type="inputType"
       name="test"
       class="text-input-container__text-input"
       required
     />
-    <label for="" class="text-input-container__text-label"
-      ><awesome-icon
-        name="at"
-        class="text-input-container__text-label__text-icon"
-      ></awesome-icon
-      >{{ inputLabel }}</label
-    >
+    <label for="" class="text-input-container__text-label">{{
+      inputLabel
+    }}</label>
     <span class="text-input-container__text-requirements">
       {{ inputRequirements }}
     </span>
@@ -39,6 +38,10 @@ export default {
     inputName: {
       type: String,
       default: '',
+    },
+    inputType: {
+      type: String,
+      default: 'text',
     },
   },
 }
