@@ -23,7 +23,8 @@
       </div>
     </div>
     <div class="flex-wrapper">
-      <!-- <button class="flex-18col-2 btn-secondary">Submit</button> -->
+      <button class="flex-18col-2 btn-primary">Submit</button>
+      <button class="flex-18col-2 btn-secondary">Submit</button>
       <form-text-input
         input-label="Email"
         input-requirements="Must be a correct email"
