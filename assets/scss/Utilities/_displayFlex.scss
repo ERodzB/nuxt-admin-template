@@ -24,6 +24,6 @@
 $flex-widths: 100 80 60 50 30 20;
 @each $width in $flex-widths {
   .flex-w-#{$width} {
-    flex: 0 0 $width * 1%;
+    flex: 0 0 ($width * 1%);
   }
 }

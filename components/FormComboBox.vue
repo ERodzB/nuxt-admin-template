@@ -3,8 +3,8 @@
     <select
       id=""
       name=""
-      @change="selectTouched"
       class="combo-input-container__combobox"
+      @change="selectTouched"
     >
       <option
         v-if="isTouched == false"
@@ -20,11 +20,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      isTouched: false,
-    }
-  },
   props: {
     comboLabel: {
       type: String,
@@ -35,6 +30,11 @@ export default {
     selectTouched() {
       return (this.isTouched = true)
     },
+  },
+  data() {
+    return {
+      isTouched: false,
+    }
   },
 }
 </script>

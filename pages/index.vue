@@ -30,6 +30,18 @@
         input-name="email"
       />
       <form-combo-box />
+      <form-radio-button
+        radio-name="test"
+        radio-label="test"
+        radio-value="test"
+        radio-id="test5"
+      />
+      <form-radio-button
+        radio-name="test"
+        radio-label="test"
+        radio-value="test"
+        radio-id="test4"
+      />
     </div>
   </div>
 </template>
@@ -37,11 +49,13 @@
 <script>
 import FormTextInput from '@/components/FormTextInput.vue'
 import FormComboBox from '~/components/FormComboBox.vue'
+import FormRadioButton from '~/components/FormRadioButton.vue'
 
 export default {
   components: {
     FormTextInput,
     FormComboBox,
+    FormRadioButton,
   },
 }
 </script>
