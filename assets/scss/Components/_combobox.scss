@@ -1,0 +1,12 @@
+.combo-input-container {
+  $comboHeight: 40px;
+
+  &__combobox {
+    height: $comboHeight;
+    min-width: 200px;
+
+    border: 3px solid $blue-700;
+    outline: none;
+    color: $grey-400;
+  }
+}

@@ -29,16 +29,19 @@
         input-requirements="Must be a correct email"
         input-name="email"
       />
+      <form-combo-box />
     </div>
   </div>
 </template>
 
 <script>
 import FormTextInput from '@/components/FormTextInput.vue'
+import FormComboBox from '~/components/FormComboBox.vue'
 
 export default {
   components: {
     FormTextInput,
+    FormComboBox,
   },
 }
 </script>

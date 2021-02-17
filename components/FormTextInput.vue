@@ -1,12 +1,12 @@
 <template>
   <div class="text-input-container">
     <div class="text-input-container__text-icon">
-      <awesome-icon name="at"></awesome-icon>
+      <awesome-icon :name="inputIcon"></awesome-icon>
     </div>
     <input
       :id="inputId"
       :type="inputType"
-      name="test"
+      :name="inputName"
       class="text-input-container__text-input"
       required
     />
@@ -42,6 +42,10 @@ export default {
     inputType: {
       type: String,
       default: 'text',
+    },
+    inputIcon: {
+      type: String,
+      default: 'angle-right',
     },
   },
 }
