@@ -43,6 +43,12 @@
         radio-value="test"
         radio-id="test4"
       />
+      <form-check-box
+        check-value="Something"
+        check-id="test10"
+        check-name="test5"
+        check-label="Plus charger $5.99"
+      />
     </div>
   </div>
 </template>

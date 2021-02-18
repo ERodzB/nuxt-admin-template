@@ -1,33 +1,33 @@
-.radio-input-container {
-  margin: 0 8px;
+.check-input-container {
   $self: &;
   display: inline-block;
   position: relative;
-  &__radio-button {
+  &__checkbox-input {
     display: none;
-    &:checked + #{$self}__input-label:after {
+    &:checked + #{$self}__checkbox-label:after {
       content: '';
-      border-radius: 100%;
-      width: 14px;
+      border-radius: 4px;
+      width: 15px;
       height: 14px;
       position: absolute;
       top: 13px;
-      left: 1px;
+      left: 9px;
       display: block;
       background: $blue-600;
     }
   }
-  &__input-label {
+  &__checkbox-label {
     color: $grey-400;
+    padding: 0 0 0 10px;
     &:before {
       content: ' ';
       display: inline-block;
       position: relative;
       top: 8px;
-      right: 4px;
+      right: 6px;
       width: 20px;
       height: 20px;
-      border-radius: 100%;
+      border-radius: 4px;
       border: 2px solid $blue-800;
       background-color: transparent;
     }

@@ -10,7 +10,7 @@
       class="text-input-container__text-input"
       required
     />
-    <label for="" class="text-input-container__text-label">{{
+    <label :for="inputId" class="text-input-container__text-label">{{
       inputLabel
     }}</label>
     <span class="text-input-container__text-requirements">
