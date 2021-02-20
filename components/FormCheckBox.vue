@@ -6,11 +6,13 @@
       :name="checkName"
       :value="checkValue"
       class="check-input-container__checkbox-input"
+      :disabled="isDisabled"
+      :checked="isChecked"
     />
-
     <label :for="checkId" class="check-input-container__checkbox-label"
       >{{ checkLabel }}
     </label>
+    <awesome-icon name="check" class="check-input-container__check-icon" />
   </div>
 </template>
 
@@ -33,6 +35,14 @@ export default {
     checkLabel: {
       type: String,
       default: 'Checkbox',
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
+    isChecked: {
+      type: Boolean,
+      default: false,
     },
   },
 }

@@ -33,21 +33,41 @@
       <form-combo-box />
       <form-radio-button
         radio-name="test"
-        radio-label="test"
+        radio-label="Test"
         radio-value="test"
         radio-id="test5"
       />
       <form-radio-button
         radio-name="test"
-        radio-label="test"
+        radio-label="Test"
         radio-value="test"
         radio-id="test4"
       />
       <form-check-box
-        check-value="Something"
+        check-value="Somethingg"
         check-id="test10"
-        check-name="test5"
-        check-label="Plus charger $5.99"
+        check-name="test10"
+        check-label="Monday"
+      />
+      <form-check-box
+        check-value="Somethinggg"
+        check-id="test11"
+        check-name="test11"
+        check-label="Tuesday"
+      />
+      <form-check-box
+        check-value="Somethinggg"
+        check-id="test12"
+        check-name="test12"
+        check-label="Wednesday"
+      />
+      <form-check-box
+        check-value="Somethinggg"
+        check-id="test13"
+        check-name="test13"
+        check-label="My ass hurts"
+        is-checked="true"
+        is-disabled="true"
       />
     </div>
   </div>

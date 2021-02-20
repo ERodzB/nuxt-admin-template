@@ -5,11 +5,14 @@
       type="radio"
       :name="radioName"
       :value="radioValue"
-      class="radio-input-container__radio-button"
+      class="radio-input-container__radio-input"
+      :disabled="isDisabled"
+      :checked="isChecked"
     />
     <label :for="radioId" class="radio-input-container__input-label">
       {{ radioLabel }}</label
     >
+    <div class="radio-input-container__radio-icon"></div>
   </div>
 </template>
 
@@ -33,6 +36,14 @@ export default {
     radioValue: {
       type: String,
       default: '',
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
+    isChecked: {
+      type: Boolean,
+      default: false,
     },
   },
 }

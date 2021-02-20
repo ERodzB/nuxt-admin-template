@@ -1,21 +1,28 @@
 .radio-input-container {
-  margin: 0 8px;
   $self: &;
+  margin: 0 8px;
   display: inline-block;
   position: relative;
-  &__radio-button {
+  &__radio-input {
     display: none;
-    &:checked + #{$self}__input-label:after {
-      content: '';
-      border-radius: 100%;
-      width: 14px;
-      height: 14px;
-      position: absolute;
-      top: 13px;
-      left: 1px;
-      display: block;
-      background: $blue-600;
+    &:checked ~ #{$self}__radio-icon {
+      opacity: 1;
     }
+    &:disabled ~ #{$self}__input-label {
+      cursor: not-allowed;
+    }
+  }
+  &__radio-icon {
+    z-index: -1;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    left: 1px;
+    background: $blue-500;
+    opacity: 0;
+    border-radius: 100%;
+    transition: opacity 0.15s ease-in;
   }
   &__input-label {
     color: $grey-400;
@@ -28,7 +35,7 @@
       width: 20px;
       height: 20px;
       border-radius: 100%;
-      border: 2px solid $blue-800;
+      border: 2px solid $blue-600;
       background-color: transparent;
     }
   }
