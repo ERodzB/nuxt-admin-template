@@ -10,8 +10,10 @@
   flex-flow: column nowrap;
 
   &__text-label {
-    color: $grey-400;
     z-index: -1;
+
+    color: $grey-400;
+
     position: absolute;
     left: 50px;
     top: 9px;
@@ -20,7 +22,7 @@
   }
   &__text-icon {
     border-radius: $borderRadius;
-    background-color: $blue-600;
+    background-color: map-get($map: $main-theme, $key: 'primary-color');
     color: $white;
     height: 94%;
     width: 38px;
@@ -34,7 +36,7 @@
     border-radius: 4px;
     height: 80%;
 
-    border: 3px solid $blue-600;
+    border: 3px solid map-get($map: $main-theme, $key: 'primary-color');
     padding: 10px 0px 0px 44px;
     outline: none;
     color: $grey-100;
