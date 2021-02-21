@@ -65,7 +65,7 @@
         check-value="Somethinggg"
         check-id="test13"
         check-name="test13"
-        check-label="My ass hurts"
+        check-label="Sorry about that"
         is-checked="true"
         is-disabled="true"
       />
