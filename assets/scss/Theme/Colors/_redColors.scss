@@ -1,0 +1,23 @@
+@import '../../Utilities/Mixins/colorMaker';
+$red-100: #690d05;
+$red-200: #7b0d02;
+$red-300: #9e1a0e;
+$red-400: #c40c0c;
+$red-500: #e62a19;
+$red-600: #f5463d;
+$red-700: #fb706c;
+$red-800: #fdb0b0;
+$red-900: #ffe8e8;
+
+$redColors: (
+  100: $red-100,
+  200: $red-200,
+  300: $red-300,
+  400: $red-400,
+  500: $red-500,
+  600: $red-600,
+  700: $red-700,
+  800: $red-800,
+  900: $red-900,
+);
+@include colorMaker($redColors, 'red');

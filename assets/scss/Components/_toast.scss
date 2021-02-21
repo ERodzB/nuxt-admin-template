@@ -1,0 +1,45 @@
+.toast-container {
+  position: fixed;
+  top: 50px;
+  left: 45%;
+  height: 100px;
+  width: 280px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $white;
+  &__toast-accent {
+    @mixin accentStyling {
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+    }
+    &--success {
+      @include accentStyling();
+      background-color: $green-500;
+    }
+    &--info {
+      @include accentStyling();
+      background-color: $yellow-500;
+    }
+    &--error {
+      @include accentStyling();
+      background-color: $red-500;
+    }
+  }
+  &__toast-logo {
+    font-size: 3rem;
+  }
+  &__toast-message {
+    flex: 0 0 60%;
+  }
+  &__close-logo {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    color: $grey-400;
+    cursor: pointer;
+  }
+}

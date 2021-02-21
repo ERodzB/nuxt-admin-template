@@ -14,6 +14,7 @@
 @import 'Components/combobox';
 @import 'Components/radioButton';
 @import 'Components/checkBox';
+@import 'Components/toast';
 //Main HTML Rules
 html {
   box-sizing: border-box;
@@ -21,6 +22,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
+  background-color: $grey-900;
 }
 @include grid;
 @include flex-grid(18);

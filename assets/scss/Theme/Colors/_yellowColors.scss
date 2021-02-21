@@ -1,0 +1,23 @@
+@import '../../Utilities/Mixins/colorMaker';
+$yellow-100: #89840a;
+$yellow-200: #89840a;
+$yellow-300: #dbd310;
+$yellow-400: #f2e809;
+$yellow-500: #fbf106;
+$yellow-600: #fbf67d;
+$yellow-700: #fbf8ac;
+$yellow-800: #fffcb9;
+$yellow-900: #fefdde;
+
+$yellowColors: (
+  100: $yellow-100,
+  200: $yellow-200,
+  300: $yellow-300,
+  400: $yellow-400,
+  500: $yellow-500,
+  600: $yellow-600,
+  700: $yellow-700,
+  800: $yellow-800,
+  900: $yellow-900,
+);
+@include colorMaker($yellowColors, 'yellow');

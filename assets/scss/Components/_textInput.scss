@@ -42,7 +42,7 @@
     color: $grey-100;
     background-color: transparent;
     .errors & {
-      border-bottom: 3px solid red;
+      border-bottom: 3px solid $red-500;
     }
     &:active + label,
     &:focus + label,

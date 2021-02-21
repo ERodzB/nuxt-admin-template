@@ -66,8 +66,12 @@
         check-id="test13"
         check-name="test13"
         check-label="Sorry about that"
-        is-checked="true"
-        is-disabled="true"
+        :is-checked="true"
+        :is-disabled="true"
+      />
+      <app-toast
+        toast-type="success"
+        toast-message="You succesfully updated the user"
       />
     </div>
   </div>
@@ -77,12 +81,14 @@
 import FormTextInput from '@/components/FormTextInput.vue'
 import FormComboBox from '~/components/FormComboBox.vue'
 import FormRadioButton from '~/components/FormRadioButton.vue'
+import AppToast from '~/components/AppToast.vue'
 
 export default {
   components: {
     FormTextInput,
     FormComboBox,
     FormRadioButton,
+    AppToast,
   },
 }
 </script>
