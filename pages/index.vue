@@ -23,7 +23,9 @@
       </div>
     </div>
     <div class="flex-wrapper">
-      <button class="flex-18col-2 btn-primary">Submit</button>
+      <button class="flex-18col-2 btn-primary" @click="showToast">
+        Submit
+      </button>
       <button class="flex-18col-2 btn-secondary">Submit</button>
       <form-text-input
         input-label="Email"
@@ -70,6 +72,8 @@
         :is-disabled="true"
       />
       <app-toast
+        v-if="isVisible"
+        :toast-show="isVisible"
         toast-type="success"
         toast-message="You succesfully updated the user"
       />
@@ -90,6 +94,16 @@ export default {
     FormRadioButton,
     AppToast,
   },
+  data() {
+    return {
+      isVisible: false,
+    }
+  },
+  methods: {
+    showToast() {
+      this.isVisible = !this.isVisible
+    },
+  },
 }
 </script>
 
@@ -99,8 +113,5 @@ export default {
 }
 h1 {
   color: map-get($main-theme, 'primary-color');
-}
-.red {
-  color: red;
 }
 </style>
