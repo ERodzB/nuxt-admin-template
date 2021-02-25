@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <app-modal v-if="modalVisible" :modal-show="modalVisible" />
     <div>
       <Logo />
       <h1 class="title">nuxt-admin-template</h1>
@@ -26,7 +27,9 @@
       <button class="flex-18col-2 btn-primary" @click="showToast">
         Submit
       </button>
-      <button class="flex-18col-2 btn-secondary">Submit</button>
+      <button class="flex-18col-2 btn-secondary" @click="showModal">
+        Submit
+      </button>
       <form-text-input
         input-label="Email"
         input-requirements="Must be a correct email"
@@ -86,6 +89,7 @@ import FormTextInput from '@/components/FormTextInput.vue'
 import FormComboBox from '~/components/FormComboBox.vue'
 import FormRadioButton from '~/components/FormRadioButton.vue'
 import AppToast from '~/components/AppToast.vue'
+import AppModal from '~/components/AppModal.vue'
 
 export default {
   components: {
@@ -93,15 +97,20 @@ export default {
     FormComboBox,
     FormRadioButton,
     AppToast,
+    AppModal,
   },
   data() {
     return {
       isVisible: false,
+      modalVisible: false,
     }
   },
   methods: {
     showToast() {
       this.isVisible = !this.isVisible
+    },
+    showModal() {
+      this.modalVisible = !this.modalVisible
     },
   },
 }

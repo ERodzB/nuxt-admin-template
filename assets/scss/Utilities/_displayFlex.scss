@@ -8,6 +8,7 @@
 .flex-column {
   flex-direction: column;
 }
+//Justify Content
 .jc {
   justify-content: center;
 }
@@ -20,8 +21,41 @@
 .jsa {
   justify-content: space-around;
 }
+.jsfe {
+  justify-content: flex-end;
+}
+
+//Align Items
+.aic {
+  align-items: center;
+}
+.aib {
+  align-items: baseline;
+}
+.aifs {
+  align-items: flex-start;
+}
+.aife {
+  align-items: flex-end;
+}
+.ais {
+  align-items: stretch;
+}
+//Align selft
+.asc {
+  align-self: center;
+}
+.asb {
+  align-self: baseline;
+}
+.asfs {
+  align-self: flex-start;
+}
+.asfe {
+  align-self: flex-end;
+}
 //Child Flex
-$flex-widths: 100 80 60 50 30 20;
+$flex-widths: 100 80 60 50 40 30 20;
 @each $width in $flex-widths {
   .flex-w-#{$width} {
     flex: 0 0 ($width * 1%);

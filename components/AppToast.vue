@@ -1,5 +1,5 @@
 <template>
-  <transition name="toast">
+  <transition name="fade">
     <div v-if="showToast === true" class="toast-container">
       <div :class="toastAccent"></div>
       <awesome-icon
@@ -74,21 +74,21 @@ export default {
       this.showToast = false
     },
     autoClose() {
-      setTimeout(() => (this.showToast = false), 2000)
+      setTimeout(() => this.closeToast(), 2000)
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.toast-enter-active {
+.fade-enter-active {
   transition: all 0.3s ease;
 }
-.toast-leave-active {
+.fade-leave-active {
   transition: all 0.8s ease-in;
 }
-.toast-enter,
-.toast-leave-to {
+.fade-enter,
+.fade-leave-to {
   transform: translateX(10px);
   opacity: 0;
 }
