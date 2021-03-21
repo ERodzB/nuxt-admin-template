@@ -1,0 +1,17 @@
+.spinner {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  border: 14px solid $blue-600;
+  border-top: 14px solid $white;
+  animation: spinning-animation 2s linear infinite;
+}
+
+@keyframes spinning-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

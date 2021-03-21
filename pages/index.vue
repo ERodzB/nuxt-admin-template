@@ -24,11 +24,9 @@
       </div>
     </div>
     <div class="flex-wrapper">
-      <button class="flex-18col-2 btn-primary" @click="showToast">
-        Submit
-      </button>
+      <button class="flex-18col-2 btn-primary" @click="showToast">Toast</button>
       <button class="flex-18col-2 btn-secondary" @click="showModal">
-        Submit
+        Modal
       </button>
       <form-text-input
         input-label="Email"
@@ -80,6 +78,7 @@
         toast-type="success"
         toast-message="You succesfully updated the user"
       />
+      <div class="spinner"></div>
     </div>
   </div>
 </template>
