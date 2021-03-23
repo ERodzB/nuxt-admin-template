@@ -5,7 +5,10 @@ $widths: 100 80 75 50 30 20 10;
 }
 
 @each $width in $widths {
-  .w-#{$width} {
+  %w-#{$width} {
     width: $width * 1%;
+  }
+  %w-#{$width}-vw {
+    width: #{$width}vw;
   }
 }
