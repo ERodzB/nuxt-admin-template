@@ -1,11 +1,11 @@
-.flex-wrapper {
+%flex-wrapper {
   display: flex;
   flex-flow: row wrap;
 }
 
 @mixin flex-grid($columns: 4) {
   @for $i from 1 to $columns + 1 {
-    .flex-#{$columns}col-#{$i} {
+    %flex-#{$columns}col-#{$i} {
       flex: 0 0 $i/$columns * 100%;
     }
   }

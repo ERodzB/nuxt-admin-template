@@ -1,0 +1,14 @@
+$heights: 100 80 75 50 30 20 10;
+
+.h-auto {
+  height: auto;
+}
+
+@each $height in $heights {
+  %h-#{$height} {
+    height: $height * 1%;
+  }
+  %h-#{$height}-vh {
+    height: #{$height}vh;
+  }
+}
