@@ -20,7 +20,8 @@
 @import 'Components/backdrop';
 @import 'Components/spinner';
 //Main HTML Rules
-html {
+html,
+* {
   box-sizing: border-box;
 }
 body {
