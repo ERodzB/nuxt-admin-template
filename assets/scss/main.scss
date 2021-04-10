@@ -20,14 +20,25 @@
 @import 'Components/backdrop';
 @import 'Components/spinner';
 //Main HTML Rules
-html,
-* {
+
+html {
   box-sizing: border-box;
 }
-body {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
   margin: 0px;
   padding: 0px;
+}
+body {
   background-color: $grey-900;
 }
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
 // @include grid;
-@include flex-grid(18);
+@include flex-grid(20);

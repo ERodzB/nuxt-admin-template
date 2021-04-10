@@ -1,12 +1,12 @@
-$xl-title-text: 2.488rem;
-$l-title-text: 2.074rem;
-$m-title-text: 1.728rem;
-$s-title-text: 1.44rem;
-$xs-title-text: 1.25rem;
+$xl-title-text: 2.074rem;
+$l-title-text: 2.728rem;
+$m-title-text: 1.44rem;
+$s-title-text: 1.2rem;
+$xs-title-text: 1rem;
 
-$paragraph-text: 1rem;
-$helper-text: 0.8rem;
-$copyright-text: 0.7rem;
+$paragraph-text: 0.833rem;
+$helper-text: 0.694rem;
+$copyright-text: 0.579rem;
 
 h1 {
   font-size: $xl-title-text;
@@ -24,6 +24,21 @@ h5 {
   font-size: $xs-title-text;
 }
 
+%xl-litle-text {
+  font-size: $xl-title-text;
+}
+%l-title-text {
+  font-size: $l-title-text;
+}
+%m-title-text {
+  font-size: $m-title-text;
+}
+%s-title-text {
+  font-size: $s-title-text;
+}
+%xs-title-text {
+  font-size: $xs-title-text;
+}
 p,
 textarea,
 input,
