@@ -1,6 +1,11 @@
 <template>
   <div class="main-menu">
-    <h3 class="main-menu__menu-title">Nuxt Template</h3>
+    <div class="main-menu__menu-header">
+      <img src="~/static/foto.png" alt="Profile Picture" />
+      <h5>{{ userData.name }}</h5>
+      <p>{{ userData.role.toUpperCase() }}</p>
+      <div class="main-menu__menu-header__line"></div>
+    </div>
     <div class="main-menu__links d-flex flex-column jsb">
       <div class="main-menu__links__content">
         <div
@@ -19,13 +24,13 @@
             class="main-menu__links__content__container__menu-link d-flex aib"
           >
             <span><awesome-icon scale="1.3" :name="link.icon" /></span>
-            {{ link.name }}</a
-          >
+            <p>{{ link.name.toUpperCase() }}</p>
+          </a>
         </div>
       </div>
       <div class="main-menu__links__menu-logout">
-        <a href="#" class="main-menu__links__menu-logout__menu-link d-flex aib">
-          <span><awesome-icon scale="1.3" name="sign-out-alt" /></span>Logout
+        <a href="#" class="main-menu__links__menu-logout__menu-link d-flex aic">
+          <span><awesome-icon scale="1.2" name="sign-out-alt" /></span>LOGOUT
         </a>
       </div>
     </div>
@@ -39,31 +44,62 @@ export default {
       type: Array,
       default: () => [{}],
     },
+    userData: {
+      type: Object,
+      default: () => ({
+        name: 'Eric Rodriguez',
+        role: 'Administrator',
+      }),
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .main-menu {
-  &__menu-title {
+  &__menu-header {
     font-family: $bodyFontFamily;
-    height: 15%;
+    height: 22%;
+    text-align: center;
+    width: 100%;
+    padding: 0px 4px 0px 0px;
+    img {
+      height: 100px;
+      width: 100px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+    h5 {
+      font-family: $bodyFontFamily;
+      color: $grey-900;
+      margin: 0px 0px 4px 0px;
+    }
+    p {
+      color: $grey-600;
+    }
+    &__line {
+      width: 100%;
+      height: 2px;
+      background-color: $grey-800;
+      margin: 12px 0px;
+    }
   }
   &__links {
-    height: 85%;
+    height: 78%;
     &__content {
+      margin: 40px 0px 0px 0px;
       &__container {
         &__menu-link-title {
+          color: $grey-900;
           font-family: $bodyFontFamily;
-          margin: 18px 0px 14px 0px;
-          color: map-get($map: $main-theme, $key: 'inverted-text-color');
+          margin: 4px 0px;
         }
         &__menu-link {
           span {
-            margin: 0px 14px 0px 0px;
+            margin: 0px 24px 0px 0px;
           }
-          margin: 10px 0px;
-          color: $grey-500;
+          color: $grey-900;
+          margin: 8px 0px;
           font-size: $xs-title-text;
           width: 100%;
         }
@@ -73,10 +109,10 @@ export default {
     &__menu-logout {
       &__menu-link {
         span {
-          margin: 0px 14px 0px 0px;
+          margin: 0px 24px 0px 0px;
         }
         margin: 6px 0px;
-        color: map-get($map: $main-theme, $key: 'inverted-text-color');
+        color: $grey-900;
         font-size: $xs-title-text;
       }
     }

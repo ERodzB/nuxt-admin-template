@@ -46,15 +46,15 @@ export default {
     top: 0px;
     left: -5px;
     bottom: 0px;
-    padding: 40px;
-    background-color: $blue-100;
+    padding: 40px 35px;
+    background-color: map-get($map: $main-theme, $key: 'primary-color');
     height: 100vh;
     overflow-y: auto;
     &* {
       widows: 100%;
     }
-    h3 {
-      text-align: center;
+    h5 {
+      font-weight: 500;
       color: map-get($map: $main-theme, $key: 'inverted-text-color');
     }
   }
